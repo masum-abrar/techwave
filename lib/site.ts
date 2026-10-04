@@ -7,7 +7,16 @@ export const site = {
   description:
     "We specialize in providing high-quality, affordable used iPhones at wholesale prices. Whether you are a retailer, reseller, or simply looking to buy iPhones in bulk, we have the perfect solutions to meet your needs.",
   categories: ["Cell Phone Store", "Wholesaler", "Wholesale market"],
-  url: "https://techwave-cellular-mobile.grexa.site",
+  // Live website address. Set NEXT_PUBLIC_SITE_URL (e.g. https://techwavecellular.com) once you have a domain;
+  // on Vercel it falls back to the project's production URL automatically.
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "") ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "") ||
+    "http://localhost:3000",
+  shareTitle: "TechWave Cellular — Wholesale Used iPhones in Deira, Dubai",
+  shareText:
+    "Graded used iPhones (A+ to C) in bulk for retailers, resellers & traders. Visit our Deira store or WhatsApp +971 54 433 8737 for today's prices.",
 
   address: "78F4+X3 - Deira, Dubai",
   city: "Deira, Dubai, United Arab Emirates",

@@ -21,16 +21,17 @@ export const metadata: Metadata = {
     default: `${site.name} — Wholesale Used iPhones in Deira, Dubai`,
     template: `%s | ${site.name}`,
   },
-  description: site.description,
+  description: site.shareText,
   keywords: ["used iPhones wholesale Dubai", "wholesale iPhones Deira", "mobile phone store Deira", "bulk iPhones UAE", ...site.categories],
   openGraph: {
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
+    title: site.shareTitle,
+    description: site.shareText,
     type: "website",
-    url: site.url,
+    url: "/",
     siteName: site.name,
+    locale: "en_AE",
   },
-  twitter: { card: "summary_large_image" },
+  twitter: { card: "summary_large_image", title: site.shareTitle, description: site.shareText },
   robots: { index: true, follow: true },
 };
 
